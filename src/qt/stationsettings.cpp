@@ -43,8 +43,8 @@ void StationSettings::saveSettings(QSettings &settings)
 void StationSettings::restoreFromSettings(QSettings &settings)
 {
     setCallsign(settings.value("callsign").toString());
-    setLat(settings.value("lat").toFloat());
-    setLon(settings.value("lon").toFloat());
+    setLat(settings.value("lat").toString());
+    setLon(settings.value("lon").toString());
     sethasPHGD(settings.value("hasPHG").toBool());
     setComment(settings.value("comment").toString());
     setGroup(settings.value("group").toChar().cell());

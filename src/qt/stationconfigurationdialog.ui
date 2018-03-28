@@ -163,7 +163,7 @@
      </rect>
     </property>
     <property name="maxLength">
-     <number>1</number>
+     <number>2</number>
     </property>
    </widget>
    <widget class="QLabel" name="label_11">
@@ -189,7 +189,7 @@
      </rect>
     </property>
     <property name="maxLength">
-     <number>1</number>
+     <number>2</number>
     </property>
    </widget>
    <widget class="QPushButton" name="symbolSelectButton">
@@ -728,6 +728,27 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>callsignEdit</tabstop>
+  <tabstop>compressedPacketsCheckbox</tabstop>
+  <tabstop>latDegEdit</tabstop>
+  <tabstop>latMinEdit</tabstop>
+  <tabstop>latDirEdit</tabstop>
+  <tabstop>lonDegEdit</tabstop>
+  <tabstop>lonMinEdit</tabstop>
+  <tabstop>lonDirEdit</tabstop>
+  <tabstop>calcButton</tabstop>
+  <tabstop>groupEdit</tabstop>
+  <tabstop>symbolEdit</tabstop>
+  <tabstop>symbolSelectButton</tabstop>
+  <tabstop>powerCombo</tabstop>
+  <tabstop>heightCombo</tabstop>
+  <tabstop>gainCombo</tabstop>
+  <tabstop>directivityCombo</tabstop>
+  <tabstop>disablePHGCheckbox</tabstop>
+  <tabstop>commentLineEdit</tabstop>
+  <tabstop>comboBox_2</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

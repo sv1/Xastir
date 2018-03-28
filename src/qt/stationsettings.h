@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QSettings>
-
+#include <QDebug>
 
 class StationSettings : public QObject
 {
@@ -23,8 +23,8 @@ public:
 
     Q_PROPERTY(QString callsign READ callsign WRITE setCallsign NOTIFY callsignChanged)
     Q_PROPERTY(bool sendCompressed READ sendCompressed WRITE setSendCompressed NOTIFY sendCompressedChanged)
-    Q_PROPERTY(float lat READ lat WRITE setLat NOTIFY latChanged)
-    Q_PROPERTY(float lon READ lon WRITE setLon NOTIFY lonChanged)
+    Q_PROPERTY(QString lat READ lat WRITE setLat NOTIFY latChanged)
+    Q_PROPERTY(QString lon READ lon WRITE setLon NOTIFY lonChanged)
     Q_PROPERTY(QString comment READ comment WRITE setComment NOTIFY commentChanged)
     Q_PROPERTY(bool hasPHGD READ hasPHGD WRITE sethasPHGD NOTIFY hasPHGDChanged)
     Q_PROPERTY(char group READ group WRITE setGroup NOTIFY groupChanged)
@@ -34,8 +34,8 @@ public:
     QString m_callsign;
     QString m_comment;
 
-    float m_lat;
-    float m_lon;
+    QString m_lat;
+    QString m_lon;
 
     bool m_hasPHGD;
     bool m_sendCompressed;
@@ -53,12 +53,12 @@ QString callsign() const
     return m_callsign;
 }
 
-float lat() const
+QString lat() const
 {
     return m_lat;
 }
 
-float lon() const
+QString lon() const
 {
     return m_lon;
 }
@@ -99,8 +99,8 @@ StationSettings::PositionAmbiguity positionAmbiguity() const
 
 signals:
 void callsignChanged(QString arg);
-void latChanged(float arg);
-void lonChanged(float arg);
+void latChanged(QString arg);
+void lonChanged(QString arg);
 void commentChanged(QString arg);
 
 void hasPHGDChanged(bool arg);
@@ -122,14 +122,15 @@ void setCallsign(QString arg)
         emit callsignChanged(arg);
     }
 }
-void setLat(float arg)
+void setLat(QString arg)
 {
     if (m_lat != arg) {
         m_lat = arg;
         emit latChanged(arg);
     }
 }
-void setLon(float arg)
+
+void setLon(QString arg)
 {
     if (m_lon != arg) {
         m_lon = arg;

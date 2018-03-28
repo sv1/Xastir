@@ -21,6 +21,7 @@ private slots:
     void symbolSettingsChanged(QString t);
     void accept();
 
+
 private:
     Ui::StationConfigurationDialog *ui;
     StationSettings *mySettings;
