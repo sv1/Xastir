@@ -23,6 +23,7 @@
 
 #include "ui_mainwindow.h"
 #include "interfacecontroldialog.h"
+#include "incomingdatadialog.h"
 #include "xastir.h"
 #include "symbols.h"
 #include "colors.h"
@@ -116,4 +117,11 @@ void MainWindow::stationSettingsAction()
     stationConfigurationDialog = new StationConfigurationDialog(&stationSettings, this);
     stationConfigurationDialog->show();
     stationConfigurationDialog->raise();
+}
+
+void MainWindow::on_action_Incoming_Data_triggered()
+{
+    incomingDataDialog = new IncomingDataDialog(this);
+    incomingDataDialog->show();
+    incomingDataDialog->raise();
 }

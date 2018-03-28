@@ -15,7 +15,16 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
-    <property name="margin">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
      <number>0</number>
     </property>
     <item>
@@ -131,7 +140,7 @@
      <x>0</x>
      <y>0</y>
      <width>1036</width>
-     <height>23</height>
+     <height>19</height>
     </rect>
    </property>
    <property name="maximumSize">
@@ -670,9 +679,6 @@
    </property>
   </action>
   <action name="action_Incoming_Data">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
    <property name="text">
     <string>&amp;Incoming Data</string>
    </property>

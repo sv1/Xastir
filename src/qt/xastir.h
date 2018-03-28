@@ -31,6 +31,7 @@
 #include "interfacecontroldialog.h"
 #include "stationconfigurationdialog.h"
 #include "stationsettings.h"
+#include "incomingdatadialog.h"
 
 namespace Ui {
     class MainWindow;
@@ -52,6 +53,7 @@ private slots:
     //void closeConnection();
     //void statusChanged(PacketInterface::Device_Status newState);
 
+    void on_action_Incoming_Data_triggered();
 
 protected:
     void changeEvent(QEvent *e);
@@ -60,6 +62,7 @@ private:
     Ui::MainWindow *ui;
     InterfaceControlDialog *interfaceControlDialog;
     StationConfigurationDialog *stationConfigurationDialog;
+    IncomingDataDialog *incomingDataDialog;
 
     QTcpSocket tcpSocket;
     InterfaceManager interfaceManager;
