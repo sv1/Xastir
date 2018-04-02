@@ -33,7 +33,7 @@ InterfaceManager::InterfaceManager(QObject *parent) :
 void InterfaceManager::addNewInterface(PacketInterface *iface)
 {
     interfaces.append(iface);
-    interfaceAdded(iface);
+    emit interfaceAdded(iface);
 }
 
 void InterfaceManager::saveInterfaces()

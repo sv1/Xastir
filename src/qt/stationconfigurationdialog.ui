@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>StationConfigurationDialog</class>
  <widget class="QDialog" name="StationConfigurationDialog">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -9,6 +12,9 @@
     <width>484</width>
     <height>420</height>
    </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
   </property>
   <property name="windowTitle">
    <string>Station Configuration</string>

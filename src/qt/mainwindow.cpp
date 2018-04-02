@@ -39,10 +39,10 @@ MainWindow::MainWindow(QWidget *parent) :
     interfaceControlDialog = NULL;
     stationConfigurationDialog = NULL;
 
-    connect(&interfaceManager, SIGNAL(interfaceAdded(PacketInterface*)), this, SLOT(newInterface(PacketInterface*)));
+ //   connect(&interfaceManager, SIGNAL(interfaceAdded(PacketInterface*)), this, SLOT(newInterface(PacketInterface*)));
  //   connect(&netInterface,SIGNAL(interfaceChangedState(PacketInterface::Device_Status)), this, SLOT(statusChanged(PacketInterface::Device_Status)));
- //   connect(&netInterface,SIGNAL(packetReceived(PacketInterface *, QString)), this, SLOT(newData(PacketInterface *,QString)));
-    total_lines = 0;
+ //   connect(&packetInterface,SIGNAL(packetReceived(PacketInterface *, QString)), this, SLOT(newData(PacketInterface *,QString)));
+
     interfaceManager.restoreInterfaces();
     QSettings settings;
 
@@ -77,30 +77,13 @@ void MainWindow::changeEvent(QEvent *e)
     }
 }
 
-void MainWindow::newInterface(PacketInterface *iface)
+
+/*void MainWindow::newInterface(PacketInterface *iface)
 {
-    connect(iface, SIGNAL(packetReceived(PacketInterface*,QString)), this, SLOT(newData(PacketInterface*,QString)));
-}
-
-void MainWindow::newData (PacketInterface *device, QString data)
-{
-    int max_lines = 15;
-    QString tmp;
+//    connect(iface, SIGNAL(packetReceived(PacketInterface*,QString)), this, SLOT(newData(PacketInterface*,QString)));
+}*/
 
 
-    packetDisplay.append(device->deviceName() + "-> " + data + "\n");
-
-    if (total_lines >= max_lines) {
-        int ii = packetDisplay.indexOf("\n");
-        // Chop first line
-        tmp = packetDisplay.right(packetDisplay.size() - (ii + 1));
-        packetDisplay = tmp;
-    }
-    else {
-        total_lines++;
-    }
-    ui->incomingPackets->setText(packetDisplay);
-}
 
 void MainWindow::interfaceControlAction()
 {
@@ -124,4 +107,26 @@ void MainWindow::on_action_Incoming_Data_triggered()
     incomingDataDialog = new IncomingDataDialog(this);
     incomingDataDialog->show();
     incomingDataDialog->raise();
+
+}
+
+void MainWindow::on_action_Defaults_triggered()
+{
+    defaultsDialog = new DefaultsDialog(this);
+    defaultsDialog->show();
+    defaultsDialog->raise();
+}
+
+void MainWindow::on_action_Timing_triggered()
+{
+    timingDialog = new TimingDialog(this);
+    timingDialog->show();
+    timingDialog->raise();
+}
+
+void MainWindow::on_action_Coordinate_System_triggered()
+{
+    coordinateSysDialog = new CoordinateSysDialog(this);
+    coordinateSysDialog->show();
+    coordinateSysDialog->raise();
 }

@@ -21,7 +21,10 @@ SOURCES += main.cpp\
     stationsettings.cpp \
     symbols.cpp \
     colors.cpp \
-    incomingdatadialog.cpp
+    incomingdatadialog.cpp \
+    defaultsdialog.cpp \
+    timingdialog.cpp \
+    coordinatesysdialog.cpp
 
 HEADERS  += \
     xastir.h \
@@ -34,13 +37,19 @@ HEADERS  += \
     stationsettings.h \
     symbols.h \
     colors.h \
-    incomingdatadialog.h
+    incomingdatadialog.h \
+    defaultsdialog.h \
+    timingdialog.h \
+    coordinatesysdialog.h
 
 FORMS    += mainwindow.ui \
     interfacecontroldialog.ui \
     netinterfacepropertiesdialog.ui \
     stationconfigurationdialog.ui \
-    incomingdatadialog.ui
+    incomingdatadialog.ui \
+    defaultsdialog.ui \
+    timingdialog.ui \
+    coordinatesysdialog.ui
 
 RESOURCES += \
     xastir.qrc

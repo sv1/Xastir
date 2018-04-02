@@ -188,6 +188,7 @@ void NetInterface::incomingData ()
             break;
         }
         data = in.readLine() + "\n";
-        packetReceived(this, data);
+        qDebug() << data;
+        emit packetReceived(this, data);
     }
 }

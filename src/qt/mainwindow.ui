@@ -169,7 +169,7 @@
      <addaction name="action_Station"/>
      <addaction name="action_Defaults"/>
      <addaction name="action_Timing"/>
-     <addaction name="actionC_oordinate_System"/>
+     <addaction name="action_Coordinate_System"/>
      <addaction name="action_Audio_Alarms"/>
      <addaction name="actionS_peech"/>
      <addaction name="actionSmart_Beaconing"/>
@@ -1202,7 +1202,7 @@
   </action>
   <action name="action_Defaults">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>&amp;Defaults</string>
@@ -1210,15 +1210,15 @@
   </action>
   <action name="action_Timing">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>&amp;Timing</string>
    </property>
   </action>
-  <action name="actionC_oordinate_System">
+  <action name="action_Coordinate_System">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>C&amp;oordinate System</string>

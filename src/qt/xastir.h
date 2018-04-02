@@ -32,6 +32,9 @@
 #include "stationconfigurationdialog.h"
 #include "stationsettings.h"
 #include "incomingdatadialog.h"
+#include "defaultsdialog.h"
+#include "timingdialog.h"
+#include "coordinatesysdialog.h"
 
 namespace Ui {
     class MainWindow;
@@ -48,12 +51,17 @@ public slots:
     void stationSettingsAction();
 
 private slots:
-    void newInterface(PacketInterface*);
-    void newData(PacketInterface *, QString);
+    //void newInterface(PacketInterface*);
     //void closeConnection();
     //void statusChanged(PacketInterface::Device_Status newState);
 
     void on_action_Incoming_Data_triggered();
+
+    void on_action_Defaults_triggered();
+
+    void on_action_Timing_triggered();
+
+    void on_action_Coordinate_System_triggered();
 
 protected:
     void changeEvent(QEvent *e);
@@ -63,12 +71,15 @@ private:
     InterfaceControlDialog *interfaceControlDialog;
     StationConfigurationDialog *stationConfigurationDialog;
     IncomingDataDialog *incomingDataDialog;
+    DefaultsDialog *defaultsDialog;
+    TimingDialog *timingDialog;
+    CoordinateSysDialog *coordinateSysDialog;
 
     QTcpSocket tcpSocket;
     InterfaceManager interfaceManager;
     StationSettings stationSettings;
-    QString packetDisplay;
-    int total_lines;
+
+
 };
 
 #endif // XASTIR_H

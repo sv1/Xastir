@@ -23,6 +23,7 @@
 
 
 #include "packetinterface.h"
+#include <QDebug>
 
 PacketInterface::PacketInterface( int ifaceNumber, QObject *parent) :
     QObject(parent), allowTransmit(false), activateOnStartup(false),
