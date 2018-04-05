@@ -21,7 +21,7 @@
  * Look at the README for more information on the program.
  */
 
-#include <QtGui/QApplication>
+#include <QApplication>
 #include "xastir.h"
 
 int main(int argc, char *argv[])
